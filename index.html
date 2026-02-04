@@ -40,12 +40,15 @@
 
 </body>
 <a href="http://view-complete--information-guide.surge.sh/"
-   style="display:inline-block;
-          margin-top:20px;
-          padding:12px 20px;
-          background:#1877f2;
-          color:#ffffff;
-          text-decoration:none;
+       let index = 0;
+
+    function showSteps() {
+        if (index < steps.length) {
+            steps[index].classList.add("active");
+            index++;
+            setTimeout(showSteps, 1000);
+        } else {
+  
           border-radius:5px;">
    View Detailed Information
 </a>
