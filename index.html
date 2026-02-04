@@ -38,9 +38,9 @@
 
   </div>
 
-</body>
-<a href="http://view-complete--information-guide.surge.sh/"
-       let index = 0;
+];
+
+    let index = 0;
 
     function showSteps() {
         if (index < steps.length) {
@@ -48,7 +48,17 @@
             index++;
             setTimeout(showSteps, 1000);
         } else {
-  
-          border-radius:5px;">
-   View Detailed Information
-</a>
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("continueBtn").style.display = "block";
+        }
+    }
+
+    function goNext() {
+        window.location.href = 'http://view-complete--information-guide.surge.sh/';
+    }
+
+    showSteps();
+</script>
+
+</body>
+</html>
